@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Traffic Monitoring Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Intelligent Control System</p>
+          <h1>Smart Traffic Monitoring</h1>
+        </div>
+        <div class="status-box">
+          <span id="modeLabel">AUTO</span>
+          <strong id="timerLabel">Timer: 10s</strong>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel control-panel">
+          <h2>Signal Control</h2>
+          <div class="button-group">
+            <button class="mode-btn active" data-mode="auto">AUTO</button>
+            <button class="mode-btn" data-mode="manual" data-road="0">ROAD 1</button>
+            <button class="mode-btn" data-mode="manual" data-road="1">ROAD 2</button>
+            <button class="mode-btn" data-mode="manual" data-road="2">ROAD 3</button>
+            <button class="mode-btn" data-mode="manual" data-road="3">ROAD 4</button>
+          </div>
+          <div class="legend">
+            <div><span class="legend-dot green"></span>Green</div>
+            <div><span class="legend-dot yellow"></span>Yellow</div>
+            <div><span class="legend-dot red"></span>Red</div>
+          </div>
+        </section>
+
+        <section class="panel map-panel">
+          <div class="intersection">
+            <div class="road road-north">
+              <span>Road 1</span>
+            </div>
+            <div class="road road-east">
+              <span>Road 2</span>
+            </div>
+            <div class="road road-south">
+              <span>Road 3</span>
+            </div>
+            <div class="road road-west">
+              <span>Road 4</span>
+            </div>
+
+            <div class="center-box">
+              <div class="signal-grid">
+                <div class="signal" data-road="0">
+                  <span class="light red active"></span>
+                  <span class="light yellow"></span>
+                  <span class="light green"></span>
+                </div>
+                <div class="signal" data-road="1">
+                  <span class="light red active"></span>
+                  <span class="light yellow"></span>
+                  <span class="light green"></span>
+                </div>
+                <div class="signal" data-road="2">
+                  <span class="light red active"></span>
+                  <span class="light yellow"></span>
+                  <span class="light green"></span>
+                </div>
+                <div class="signal" data-road="3">
+                  <span class="light red active"></span>
+                  <span class="light yellow"></span>
+                  <span class="light green"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="roads-grid" id="roadsGrid"></section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
